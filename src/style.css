@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+
+/* main header */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    border-right: 1px solid #efefef;
+    z-index: 10;
+}
+
+.main-header>.smile-face {
+    width: 35px;
+    height: 35px;
+    background: url(../asset/smile-face.svg) no-repeat center;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-menu {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2a2a2c;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+}
+
+.btn-menu:hover .span-block {
+    height: 16px;
+}
+
+.btn-menu>.span-block {
+    width: 26px;
+    height: 12px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: height .3s ease-in;
+}
+
+.btn-menu>.span-block>span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+}
+
+.btn-menu>.span-block>span.top-line {
+    top: 0;
+}
+
+.btn-menu>.span-block>span.bottom-line {
+    bottom: 0;
+}
+
+
+/* main container */
+
+.main-container {
+    position: absolute;
+    left: 80px;
+    width: calc(100% - 80px);
+}
+
+
+/* info */
+
+section.info {
+    position: relative;
+    height: 100vh;
+    color: #9b9ba4;
+}
+
+.info>header {
+    padding-top: 100px;
+    padding-left: 150px;
+}
+
+.info>.photo {
+    width: 500px;
+    height: calc(100% - 100px);
+    background: #2a2a2c;
+    position: absolute;
+    left: 500px;
+    top: 100px;
+}
+
+
+/* 
+.to-be-continue {
+    width: 100%;
+    height: 500px;
+    background-color: #9b9ba4;
+    text-align: center;
+}
+
+*/
+
+
+/* footer */
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+footer>.vertical-line {
+    display: block;
+    position: relative;
+    width: 2px;
+    height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2a2a2c;
+    margin: 40px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #2a2a2c;
+    cursor: pointer;
+}
+
+footer>.link-email {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+footer>.link-others {
+    font-weight: lighter;
+}
+
+footer>.smile-face {
+    width: 30px;
+    height: 30px;
+    background: url(../asset/smile-face.svg) no-repeat center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+
+
+/* for mobile */
+
+@media screen and (max-width:767px) {
+    .main-header {
+        width: 100%;
+        height: 80px;
+        background-color: transparent;
+    }
+    .main-header>.smile-face {
+        width: 30px;
+        height: 30px;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .btn-menu {
+        width: 45px;
+        height: 45px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .btn-menu>.span-block {
+        width: 15px;
+        height: 5px;
+    }
+    .btn-menu>.span-block>span {
+        height: 1px;
+    }
+    .btn-menu:hover .span-block {
+        height: 5px;
+    }
+    .main-container {
+        left: 0;
+        top: 80px;
+        width: 100%;
+    }
+    /* info */
+    section.info {
+        height: auto;
+    }
+    .info>header {
+        position: relative;
+        left: 30%;
+        width: 70%;
+        padding: 0;
+    }
+    .info>header>* {
+        margin: 8px 0;
+    }
+    .info>.photo {
+        width: 70%;
+        height: 320px;
+        background: #2a2a2c;
+        position: relative;
+        left: 30%;
+        top: unset;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    /* footer */
+    footer>.vertical-line {
+        width: 1px;
+    }
+    footer>.link-email {
+        font-weight: normal;
+        font-size: 1.2em;
+    }
+}
